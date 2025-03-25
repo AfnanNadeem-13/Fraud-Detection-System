@@ -40,9 +40,34 @@ python fraud_detection.py
    - Built a simple command-line interface for testing.
 
 ## Model Performance
-- **Precision:** *xx.x%*
-- **Recall:** *xx.x%*
-- **F1-score:** *xx.x%*
+
+| Metric      | Score  |
+|------------|--------|
+| **Precision** | 100%  |
+| **Recall**    | 99%   |
+| **F1-score**  | 99%   |
+
+### Confusion Matrix:
+[[56825 16] [ 47 5662]]
+
+markdown
+Copy
+Edit
+
+- **True Negatives (TN):** 56825 (Non-Fraud correctly classified)
+- **False Positives (FP):** 16 (Non-Fraud wrongly classified as Fraud)
+- **False Negatives (FN):** 47 (Fraud missed as Non-Fraud)
+- **True Positives (TP):** 5662 (Fraud correctly detected)
+
+### Key Observations:
+- The model performs **exceptionally well**, detecting fraudulent transactions with **high accuracy**.
+- Very **few false positives and false negatives**, indicating a **strong generalization**.
+- The **recall for fraud cases is 99%**, meaning almost all fraud transactions are caught.
+
+📌 **Next Steps:**
+- Perform **cross-validation** to ensure model reliability.
+- Generate an **ROC Curve & AUC Score** for deeper insights.
+
 
 ## Usage
 To test a transaction, use:
@@ -70,8 +95,7 @@ Fraud-Detection-System/
 ## Submission Requirements Checklist
 - [x] **GitHub Repository:** Code, dataset reference, and related files pushed.
 - [x] **Visuals Submission:** Screenshots or a short video of results.
-- [x] **Documentation:** `README.md` explaining project steps, execution, and observations.
-- [x] **Submission Deadline:** March 27, 2025.
+- [x] **Documentation:** `README.md` explaining project steps, execution.
 
 ## References
 - [Kaggle: Credit Card Fraud Dataset](https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud)
